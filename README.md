@@ -23,3 +23,6 @@ I have added the `style.css` file into the repo. If you copy and paste it into y
     </li>
 </ul>
 ```
+
+# Example Image
+![Stepper Image](./img/stepper.png)
