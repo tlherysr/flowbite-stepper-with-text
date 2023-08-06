@@ -1,0 +1,27 @@
+.stepper {
+    @apply inline-grid grid-cols-4 auto-cols-auto w-full
+}
+
+.stepper>.step {
+    @apply grid grid-rows-[40px,1fr] place-items-center text-center w-full relative
+}
+
+.stepper>.step:first-child {
+    @apply after:z-10 after:rounded-full after:bg-gray-100 after:content-['✓'] after:w-10 after:h-10 after:p-2 after:relative after:col-start-1 after:row-start-1 after:grid after:place-items-center after:place-self-center
+}
+
+.stepper>.step:not(:first-child) {
+    @apply before:absolute before:top-4 before:col-start-1 before:row-start-1 before:h-1 before:w-full before:border-b before:border-4 before:inline-block before:-ml-[100%] after:z-10 after:rounded-full after:bg-gray-100 after:content-['✓'] after:w-10 after:h-10 after:p-2 after:relative after:col-start-1 after:row-start-1 after:grid after:place-items-center after:place-self-center
+}
+
+.stepper>.step:not(:first-child):not(.step-done) {
+    @apply before:border-gray-100
+}
+
+.stepper>.step-done {
+    @apply font-bold text-blue-600
+}
+
+.stepper>.step-done:not(:first-child) {
+    @apply before:border-blue-500
+}
